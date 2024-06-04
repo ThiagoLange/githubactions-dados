@@ -1,5 +1,5 @@
-name: Exemplo Input
-run-name: Exemplo workflow para input, executado por ${{ github.actor }}
+name: Exemplo Output
+run-name: Exemplo workflow para output, executado por ${{ github.actor }}
 on:
   workflow_dispatch:
 jobs:
@@ -10,7 +10,7 @@ jobs:
                 id: exemplo-output
                 run: |
                     ACTION_RANDOM=$(( $RANDOM ))
-                    echo action_random=$ACTION_RANDOM" >> $GITHUB_OUTPUT
+                    echo "action_random=$ACTION_RANDOM" >> $GITHUB_OUTPUT
 
             -   name: Exibindo o output da action exemplo output
                 run: echo "{{ steps.exemplo-output.outputs.action_random }}"
