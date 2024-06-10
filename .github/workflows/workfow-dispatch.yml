@@ -1,7 +1,10 @@
 name: Workflow Evento
 on:
     push:
-        #branches: ["main", "feature/*"]
+        branches: ["main", "feature/*"]
+        #paths-ignore: 
+        paths:
+            - "src/**"
         tags:
             - v*
 jobs:
