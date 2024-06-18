@@ -1,7 +1,8 @@
-name: Schedule
+name: Schedule e Inputs
 on:
-    schedule:
-        -   cron: "*/2 * * * *"
+    #schedule:
+    #    -   cron: "*/2 * * * *"
+    workflow_dispatch:
 jobs:
     teste:
         permissions: write-all
