@@ -12,10 +12,10 @@ jobs:
     todos:
         runs-on: ubuntu-latest
         steps:
-            -   name: Execução e Feature
+            -   name: Execução em Feature
                 if: ${{ contains(github.ref, 'refs/heads/feature') }}
                 run: echo "Execução em Feature"
-            -   name: Execução e Feature
+            -   name: Execução em Main 
                 if: ${{ github.ref == 'refs/heads/main' }}
                 run: echo "Execução em Main"
             -   name: Envio de Erros
