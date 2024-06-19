@@ -18,3 +18,6 @@ jobs:
             -   name: Execução e Feature
                 if: ${{ github.ref == 'refs/heads/main' }}
                 run: echo "Execução em Main"
+            -   name: Envio de Erros
+                if: ${{ failure() }}
+                run: echo "Envio de erro"
