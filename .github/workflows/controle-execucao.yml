@@ -9,3 +9,12 @@ jobs:
         steps:
             -   name: Executando na main
                 run: echo "Executando na main"
+    todos:
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Execução e Feature
+                if: ${{ contains(github.ref, 'refs/heads/feature') }}
+                run: echo "Execução em Feature"
+            -   name: Execução e Feature
+                if: ${{ github.ref == 'refs/heads/main' }}
+                run: echo "Execução em Main"
